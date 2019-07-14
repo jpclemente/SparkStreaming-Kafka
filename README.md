@@ -1,12 +1,12 @@
 # SparkStreaming-Kafka
 
 ## Overview
-This is Streaming program that reads from a kafka topic and uses SparkStreaming to process the data and write into another topic.
+This is a streaming program that reads data from a kafka topic and uses SparkStreaming to process it and write it into another topic.
 
 ## User guide
 
-### Starting zookeeer kafka
-First you need to start zookeeper and kafka server. Assuming that there is KAFKA_HOME environment variable, this commands should to the work:
+### Starting zookeeper kafka
+First of all, you need to start zookeeper and kafka servers. Assuming there is KAFKA_HOME environment variable, these commands should start them:
 
 $KAFKA_HOME/bin/zookeeper-server-start.sh config/zookeeper.properties
 
@@ -14,13 +14,16 @@ $KAFKA_HOME/bin/kafka-server-start.sh config/server.properties
 
 
 ### Starting kafka producer
+Now you can start sending messages to the kafka queue. This command sends te content of the given file line by line in intervals between 0.6 and 0.3 seconds to the "test" topic:
 
 python kafka_producer.py 0.6 1.3 test ./data/datatest.txt
 
+
 ### Starting the SparkStreaming programm
+Now that the data is in the kafka queue, you can lanch the jupyter-notebook, which reads from the queue, does the processing and writes the data into another kafka queue to read it again and print it.
 
 ### Stoping zookeeer and kafka
-Once you have finished, you should stop kafka and zookeeper:
+Once you have finished, you should stop kafka and zookeeper servers:
 
 $KAFKA_HOME/bin/zookeeper-server-stop.sh
 
