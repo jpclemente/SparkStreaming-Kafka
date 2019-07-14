@@ -10,6 +10,7 @@ This is a streaming program that reads data from a kafka topic and uses SparkStr
 First of all, you need to start zookeeper and kafka servers. Assuming there is KAFKA_HOME environment variable, these commands should start them:
 
 $KAFKA_HOME/bin/zookeeper-server-start.sh config/zookeeper.properties
+
 $KAFKA_HOME/bin/kafka-server-start.sh config/server.properties
 
 
@@ -27,4 +28,5 @@ Now that the data is in the kafka queue, you can lanch the jupyter-notebook, whi
 Once you have finished, you should stop kafka and zookeeper servers:
 
 $KAFKA_HOME/bin/zookeeper-server-stop.sh
+
 $KAFKA_HOME/bin/kafka-server-stop.sh
