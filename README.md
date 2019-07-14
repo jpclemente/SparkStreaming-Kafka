@@ -17,7 +17,7 @@ $KAFKA_HOME/bin/kafka-server-start.sh config/server.properties
 ### Starting kafka producer
 Now you can start sending messages to the kafka queue. This command sends te content of the given file line by line in intervals between 0.6 and 0.3 seconds to the "test" topic:
 
-python kafka_producer.py 0.6 1.3 test ./data/datatest.txt
+python kafka_producer.py 0.6 1.3 test ./data/occupancy_data.csv
 
 
 ### Starting the SparkStreaming program
