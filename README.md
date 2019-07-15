@@ -1,7 +1,7 @@
 # SparkStreaming-Kafka
 
 ## Overview
-This is a streaming program that reads data from a kafka topic and uses SparkStreaming to process it and write it into another topic.
+This is a streaming program that reads data from a kafka topic and uses Spark to process it and write it into another kafka topic.
 
 
 ## User guide
