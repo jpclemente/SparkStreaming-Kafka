@@ -20,7 +20,7 @@ Now you can start sending messages to the kafka queue. This command sends te con
 python kafka_producer.py 0.6 1.3 test ./data/occupancy_data.csv
 
 
-### Starting the SparkStreaming program
+### Running the Spark streaming program
 Now that the data is in the kafka queue, you can lanch the jupyter-notebook, which reads from the queue, does the processing and writes the data into another kafka queue to read it again and print it on the console.
 
 
